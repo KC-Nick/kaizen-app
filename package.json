@@ -1,5 +1,5 @@
 {
-    "name": "motivational-support",
+    "name": "kaizen-app",
     "version": "1.0.0",
     "description": "A support group for your goals.",
     "main": "server.js",
@@ -9,14 +9,14 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/KC-Nick/motivational-support.git"
+      "url": "git+https://github.com/KC-Nick/kaizen-app.git"
     },
     "author": "Contributors",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/KC-Nick/motivational-support/issues"
+      "url": "https://github.com/KC-Nick/kaizen-app/issues"
     },
-    "homepage": "https://github.com/KC-Nick/motivational-support#readme",
+    "homepage": "https://github.com/KC-Nick/kaizen-app#readme",
     "dependencies": {
       "bcrypt": "^5.1.1",
       "connect-session-sequelize": "^7.1.7",
