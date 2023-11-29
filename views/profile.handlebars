@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>THE KAIZEN APP</h2>
+    <nav></nav>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>create a new goal</h3>
+
+    <form class="form new-goal-form">
+      <div class="form-group">
+        <label for="project-name">goal: </label>
+        <input class="form-input" type="text" id="goal-name" name="goal-name" />
+      </div>
+      <div class="form-group">
+        <label for="goal-desc">description:</label>
+        <textarea class="form-input" id="goal-desc" name="goal-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="timeframe">timeframe: </label>
+        <textarea class="timeframe" id="timeframe" name="timeframe"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if post.length}}
+  <div class="col-md-6 project-list">
+    <h3>current goal:</h3>
+
+    {{#each posts as |post|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">delete</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
