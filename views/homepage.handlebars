@@ -1,10 +1,14 @@
 {{#each users as |user| }}
-<div class="homepage_user">
-  <div class="">
+<div class="homepage-user">
+  <div>
     <h2>{{user.name}}</h2>
   </div>
-  <div class="">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+  <div>
+    <h3>
+        {{#each user.posts}}
+          <p>{{this.title}}</p>
+        {{/each}}
+      </h3>
   </div>
 </div>
 {{/each}}
