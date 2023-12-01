@@ -11,9 +11,8 @@
 <body>
   <header class="title">
     <h1>THE KAIZEN APP</h1>
-  
-     {{#if logged_in}}
-    <a class="profile" href="/profile">profile</a> |
+    <!-- Conditionally render login or logout links -->
+    <a class="href profile" href="/profile">profile</a>
     <button class="no-button" id="logout">logout</button>
     {{else}}
     <a class="href" href="/login">login</a>
@@ -23,7 +22,7 @@
     {{{ body }}}
   </main>
   <footer>
-      
+
   </footer>
 
   {{#if logged_in}}
