@@ -11,24 +11,26 @@
 <body>
   <header class="title">
     <h1>THE KAIZEN APP</h1>
-    
+
+    <!-- Conditionally render login or logout links -->
     {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
+    <a class="href profile" href="/profile">profile</a>
+    <button class="no-button" id="logout">logout</button>
+    {{else}}
+    <a class="href" href="/login">login</a>
     {{/if}}
   </header>
   <main class="login">
     {{{ body }}}
   </main>
   <footer>
-      
+
   </footer>
 
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-    <script src="/js/login.js"></script>
+  <script src="/js/login.js"></script>
 </body>
 
 </html>
