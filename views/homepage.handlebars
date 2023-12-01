@@ -5,12 +5,13 @@
     <h2>
       <a class="href" href="/posts/{{post.id}}">{{post.name}}</a>
     </h2>
-    <p class="posts-div">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+    <p class="posts-div ">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
   </div>
-  <div class="postsdesc-div">
-    <p>
+  <div class="postsdesc-div grid">
+    <p class="grid-item">
       {{post.description}}
     </p>
   </div>
 </div>
+
 {{/each}}
