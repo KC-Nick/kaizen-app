@@ -21,7 +21,7 @@ Post.init(
     },
     timeframe: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: false
     },
     date_created: {
       type: DataTypes.DATE,
