@@ -1,14 +1,17 @@
-{{#each users as |user| }}
-<div class="homepage-user">
+<!-- Loop over each object in the posts array -->
+{{#each posts as |post| }}
+<div class="homepage-post-div">
   <div>
-    <h2>{{user.name}}</h2>
+    <h2>
+      <a class="href" href="/posts/{{post.id}}">{{post.name}}</a>
+    </h2>
+    <p class="posts-div ">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
   </div>
-  <div>
-    <h3>
-        {{#each user.posts}}
-          <p>{{this.title}}</p>
-        {{/each}}
-      </h3>
+  <div class="postsdesc-div grid">
+    <p class="grid-item">
+      {{post.description}}
+    </p>
   </div>
 </div>
+
 {{/each}}

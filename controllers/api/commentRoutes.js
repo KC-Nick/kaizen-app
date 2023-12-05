@@ -33,11 +33,13 @@ router.post('/', async (req, res) => {
             {
                 description: req.body.description,
                 //does this connect to Post model?
-                post_id: req.params.post_id
+                post_id: req.body.post_id,
+                user_id: req.session.user_id
             }
         );
         res.status(200).json(commentData);
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });

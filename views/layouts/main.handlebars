@@ -5,29 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>login</title>
-  <link rel="stylesheet" href="/public/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <header class="title">
     <h1>THE KAIZEN APP</h1>
-    
+
+    <!-- Conditionally render login or logout links -->
     {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
+    <a class="href profile" href="/profile">profile</a>
+    <button class="no-button" id="logout">logout</button>
+    {{else}}
+    <a class="href" href="/login">login</a>
     {{/if}}
   </header>
   <main class="login">
     {{{ body }}}
   </main>
   <footer>
-      
+
   </footer>
 
   {{#if logged_in}}
-  <script src="/public/js/login.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
+    <script src="/js/login.js"></script>
+    <script src="/path/to/masonry.pkgd.min.js"></script>
 </body>
 
 </html>
