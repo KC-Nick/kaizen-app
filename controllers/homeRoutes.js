@@ -39,8 +39,9 @@ router.get('/posts/:id', async (req, res) => {
         include: [{
           model: User,
           attributes: ['name']
-      ],
-    });
+        }],
+    }]
+  });
 
     const post = postData.get({ plain: true });
     res.render('post', {
