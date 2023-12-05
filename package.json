@@ -4,8 +4,8 @@
     "description": "A support group for your goals.",
     "main": "server.js",
     "scripts": {
-        "test": "node test",
-        "start": "node index.js"
+      "test": "node test",
+      "start": "node server.js"
     },
     "repository": {
         "type": "git",
