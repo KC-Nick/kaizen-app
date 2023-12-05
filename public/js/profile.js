@@ -3,12 +3,12 @@ const newFormHandler = async (event) => {
 
   const name = document.querySelector('#name').value.trim();
   const description = document.querySelector('#desc').value.trim();
-  const timeframe = document.querySelector('#timeframe')
+  const timeframe = document.querySelector('#timeframe').value.trim();
 
-  if (name && description) {
+  if (name && description && timeframe) {
     const response = await fetch(`/api/posts`, {
       method: 'POST',
-      body: JSON.stringify({ name, description }),
+      body: JSON.stringify({ name, description, timeframe }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -44,7 +44,7 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-post-form')
+  .querySelector('.new-goal-form')
   .addEventListener('submit', newFormHandler);
 
 document
