@@ -17,6 +17,7 @@ Post.init(
     },
     description: {
       type: DataTypes.STRING,
+      allowNull: false
     },
     timeframe: {
         type: DataTypes.STRING,
