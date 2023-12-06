@@ -27,17 +27,17 @@
     </form>
   </div>
 
-  {{#if post.length}}
+  {{#if this.posts.length}}
   <div class="col-md-6 post-list">
     <h3>current goal:</h3>
 
-    {{#each posts as |post|}}
+    {{#each this.posts as |post|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/posts/{{post.id}}">{{post.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" type="submit" value="delete">delete</button>
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}" value="delete">delete</button>
       </div>
     </div>
     {{/each}}
