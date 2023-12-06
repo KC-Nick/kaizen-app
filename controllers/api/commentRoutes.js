@@ -23,7 +23,8 @@ router.put('/:id', (req, res) => {
     // update a comment's description by its `id` value
     Comment.update(
         {
-            description: req.body.description
+            description: req.body.description,
+            timeframe: req.body.timeframe
         },
         {
             where: {

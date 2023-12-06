@@ -3,7 +3,6 @@ const { Post } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    console.log(req.body);
     const newPost = await Post.create({
       name: req.body.name,
       description: req.body.description,
@@ -17,6 +16,26 @@ router.post('/', async (req, res) => {
     console.log(err);
     res.status(400).json(err);
   }
+});
+
+router.put('/posts/:id', async (req, res) => {
+  console.log("test put route");
+    Post.update(
+      {
+        description: req.body.description,
+        timeframe: req.body.timeframe
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    )
+      .then((updatedPost) => {
+        // Sends the updated book as a json response
+        res.json(updatedPost);
+      })
+      .catch((err) => res.json(err));
 });
 
 router.delete('/:id', async (req, res) => {
