@@ -1,22 +1,22 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif;   font-size: 16px;
+    font-family: "Open Sans", sans-serif; font-size: 16px;
     color: #1a1a1a;
     min-height: 100%;
 }
 
 h1 {
     font-size: 3em;
-    margin: 0.7em 0;
+    margin: 0;
 }
 main {
     display: block;
+    position: relative;
 }
 
 button,
 input,
-optgroup,
 select,
 textarea {
   font-family: "Open Sans", sans-serif;
@@ -25,16 +25,10 @@ textarea {
   margin: 0;
 }
 
-textarea {
-    overflow: auto;
-}
-
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -55,30 +49,12 @@ h4 {
   font-size: 1.5rem;
 }
 
-
 p {
   font-size: 1.1rem;
   margin: 0 0 1rem;
   line-height: 1.5;
 }
 
-ul,
-ol,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-label {
-  display: inline-block;
-}
-
-input,
-select,
-textarea,
-button {
-  margin: 0;
-}
 
 a {
   color: #1b89bc;
@@ -95,6 +71,10 @@ input {
   overflow: visible;
 }
 
+textarea {
+  overflow: auto;
+}
+
 form {
     width: 100%;
   }
@@ -108,13 +88,6 @@ form {
 .form-input {
     overflow: auto;
   }
-
-.container {
-    width: 85%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
     
