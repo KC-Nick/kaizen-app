@@ -62,17 +62,5 @@ text-decoration: underline;
   }
 }  
 
-
-@-webkit-keyframes appear {
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes appear {
-  100% {
-    opacity: 1;
-  }
-}
   
 .grid-item { width: 200px; }
