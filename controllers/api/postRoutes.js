@@ -18,8 +18,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/posts/:id', async (req, res) => {
-  console.log("test put route");
+router.put('/:id', async (req, res) => {
     Post.update(
       {
         description: req.body.description,

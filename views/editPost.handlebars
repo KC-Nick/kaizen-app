@@ -4,7 +4,8 @@
   <textarea id="desc-input"></textarea>
   <label for="timeframe-input">new timeframe:</label>
   <textarea id="timeframe-input"></textarea>
-  <button type="submit" class="btn btn-edit">save</button>
+  <script>console.log(post.id);</script>
+  <button type="submit" data-id="{{post.id}}" class="btn btn-edit">save</button>
 </form>
-{{!--
-<script src="/js/profile.js"></script> --}}
+
+<script src="/js/editPost.js"></script>

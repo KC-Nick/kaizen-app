@@ -44,33 +44,6 @@ const delButtonHandler = async (event) => {
   }
 };
 
-const editButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
-    
-    const description = document.querySelector('#desc-input').value.trim();
-    const timeframe = document.querySelector('#timeframe-input').value.trim();
-    const post_id = window.location.pathname.split("/")[2]
-    
-    if (description && timeframe && post_id) {
-      const response = await fetch(`/api/posts/`, {
-        method: 'PUT',
-        body: JSON.stringify({ description, timeframe, post_id }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      
-      if (response.ok) {
-        console.log("profile js")
-        res.redirect(`/api/posts/${post_id}`);
-      } else {
-        alert('Failed to edit post');
-      }
-    }
-  }
-};
-
 document
   .querySelector('.new-goal-form')
   .addEventListener('submit', newPostHandler);
@@ -78,7 +51,3 @@ document
 document
   .querySelector('.btn-danger')
   .addEventListener('click', delButtonHandler);
-
-  document
-  .querySelector('.btn-edit')
-  .addEventListener('click', editButtonHandler);

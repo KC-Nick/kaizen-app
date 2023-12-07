@@ -70,6 +70,21 @@ router.get('/posts/:id/edit', async (req, res) => {
   }
 });
 
+router.get('/comments/:id/edit', async (req, res) => {
+  try {
+    const commentData = await Comment.findByPk(req.params.id);
+
+    const comment = commentData.get({ plain: true });
+    res.render('editComment', {
+      comment,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
