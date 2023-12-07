@@ -2,13 +2,13 @@
 {{#each posts as |post| }}
 <div class="homepage-post-div">
   <div>
-    <h2>
+    <h2 class="text-orange-500 text-3xl py-5">
       <a class="href" href="/posts/{{post.id}}">{{post.name}}</a>
     </h2>
-    <p class="posts-div ">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+    <p class="posts-div text-blue-900">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
   </div>
   <div class="postsdesc-div grid">
-    <p class="grid-item">
+    <p class="grid-item ">
       {{post.description}}
     </p>
   </div>

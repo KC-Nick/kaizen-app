@@ -1,48 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 header {
-    font-family: 'Ubuntu', sans-serif;
-  }
+  font-family: 'Ubuntu', sans-serif;
+}
 
 html {
-  font-family: 'Ubuntu', sans-serif;
-  width: 100%;
+font-family: 'Ubuntu', sans-serif;
+width: 100%;
 }
 
-body {
-  margin: 5% auto 0 auto;
-  width: 90%;
-  max-width: 200px
-}
+/*body {
+margin: 5% auto 0 auto;
+width: 90%;
+max-width: 200px
+} */
+
 
 h1 {
-  font-size: 28px;
-}
-
-input,
-label,
-textarea {
-  font-family: 'Ubuntu', sans-serif;
-  display: block;
-  margin: 10px;
-  padding: 5px;
-  border-radius: 2px;
-  font-size: 20px;
-}
-
-.btn {
-  font-family: "Open Sans", sans-serif;
-  font-size: 15px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
+  
+  color: rgb(30 58 138);
   cursor: pointer;
   border: 3px solid;
-  padding: 0.25em 0.5em;
+  padding: 10px 10px;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
   position: relative;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+
+}
+  
+
+  h2 {
+    vertical-align: top;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+input,
+label,
+/*textarea {
+font-family: 'Ubuntu', sans-serif;
+display: block;
+margin: 10px;
+padding: 5px;
+border-radius: 2px;
+font-size: 20px;
+} */
+
+.btn {
+font-family: "Open Sans", sans-serif;
+font-size: 15px;
+letter-spacing: 2px;
+text-decoration: none;
+text-transform: uppercase;
+color: rgb(30 58 138);
+cursor: pointer;
+border: 3px solid;
+padding: 0.25em 0.5em;
+box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+position: relative;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+
 }
 
 .btn:active {
@@ -57,10 +80,8 @@ text-decoration: underline;
 }
 
 @media (min-width: 768px) {
-  .btn {
-    padding: 0.25em 0.75em;
-  }
+.btn {
+  padding: 0.25em 0.75em;
+}
 }  
 
-  
-.grid-item { width: 200px; }
