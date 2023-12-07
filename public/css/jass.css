@@ -1,18 +1,88 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-family: "Open Sans", sans-serif; font-size: 16px;
     color: #1a1a1a;
-}
-
-main {
-    display: block;
+    min-height: 100%;
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: 3em;
+    margin: 0;
+}
+main {
+    display: block;
+    position: relative;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+
+a {
+  color: #1b89bc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+textarea {
+  overflow: auto;
+}
+
+form {
+    width: 100%;
+  }
+  
+.form-group {
+    display: block;
+    width: 100%;
+    margin: 0.625rem 0;
 }
 
 .form-input {

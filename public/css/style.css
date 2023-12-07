@@ -1,20 +1,66 @@
 header {
-    border-bottom: 1px solid rgb(4, 4, 65);
+    font-family: 'Ubuntu', sans-serif;
   }
 
+html {
+  font-family: 'Ubuntu', sans-serif;
+  width: 100%;
+}
+
+body {
+  margin: 5% auto 0 auto;
+  width: 90%;
+  max-width: 200px
+}
+
+h1 {
+  font-size: 28px;
+}
+
+input,
+label,
+textarea {
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 20px;
+}
+
 .btn {
-    background: none;
-    border-radius: 2px;
-    padding: 0;
-    cursor: pointer;
-    color: #065b83;
-    text-decoration: none;
-    font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:active {
+box-shadow: 0px 0px 0px 0px;
+top: 5px;
+left: 5px;
+}
+
+.btn:hover {
+color: rgb(11, 11, 107);
+text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 0.25em 0.75em;
   }
-  
-  .btn:hover {
-    color: orangered;
-    text-decoration: underline;
-  }
+}  
+
   
 .grid-item { width: 200px; }
