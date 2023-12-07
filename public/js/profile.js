@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const newPostHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#goal-name').value.trim();
@@ -46,8 +46,8 @@ const delButtonHandler = async (event) => {
 
 document
   .querySelector('.new-goal-form')
-  .addEventListener('submit', newFormHandler);
+  .addEventListener('submit', newPostHandler);
 
 document
-  .querySelector('.post-list')
+  .querySelector('.btn-danger')
   .addEventListener('click', delButtonHandler);
