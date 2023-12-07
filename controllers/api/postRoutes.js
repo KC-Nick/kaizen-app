@@ -19,6 +19,25 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+    Post.update(
+      {
+        description: req.body.description,
+        timeframe: req.body.timeframe
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    )
+      .then((updatedPost) => {
+        // Sends the updated book as a json response
+        res.json(updatedPost);
+      })
+      .catch((err) => res.json(err));
+});
+
 router.delete('/:id', async (req, res) => {
   try {
     const postData = await Post.destroy({
