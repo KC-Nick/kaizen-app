@@ -1,11 +1,11 @@
-<div id="{{{post.id}}}" class="text-center">
+<div id="{{{id}}}" class="text-center">
   <h2>{{name}}</h2>
   <p>{{description}}</p>
   <p>{{timeframe}}</p>
   <a href="/posts/{{id}}/edit" value="edit">edit</a>
   <p>Created by {{user.name}} — {{format_date date_created}}</p>
   <div class="col-md-4">
-    <button class="btn btn-danger" data-id="{{post.id}}" value="delete">delete</button>
+    <button class="btn btn-danger" data-id="{{id}}" value="delete">delete</button>
   </div>
   <p>Leave a comment below.</p>
 </div>
@@ -34,4 +34,4 @@
 </div>
 </div>
 <script src="/js/comment.js"></script>
-<script src="/js/editComment.js"></script>
+<script src="/js/delete-ind-post.js"></script>

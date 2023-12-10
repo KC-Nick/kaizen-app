@@ -19,23 +19,23 @@ router.post('/', async (req, res) => {
     }
 });
 
-// router.put('/:id', async (req, res) => {
-//     Comment.update(
-//       {
-//         description: req.body.description
-//       },
-//       {
-//         where: {
-//           id: req.params.id,
-//         },
-//       }
-//     )
-//       .then((updatedComment) => {
-//         // Sends the updated book as a json response
-//         res.json(updatedComment);
-//       })
-//       .catch((err) => res.json(err));
-// });
+router.put('/:id', async (req, res) => {
+    Comment.update(
+      {
+        description: req.body.description
+      },
+      {
+        where: {
+          id: req.params.id
+        },
+      }
+    )
+      .then((updatedComment) => {
+        // Sends the updated book as a json response
+        res.json(updatedComment);
+      })
+      .catch((err) => console.log(err));
+});
 
 router.delete('/:id', (req, res) => {
     Comment.destroy({

@@ -55,6 +55,28 @@ router.get('/posts/:id', async (req, res) => {
   }
 });
 
+router.get('/comments/:id', async (req, res) => {
+  try {
+    const commentData = await Comment.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        }]
+  });
+
+    const comment = commentData.get({ plain: true });
+    res.render('single-comment', {
+      ...comment,
+      logged_in: req.session.logged_in
+    });
+    console.log(comment);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get('/posts/:id/edit', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id);
@@ -79,6 +101,7 @@ router.get('/comments/:id/edit', async (req, res) => {
       comment,
       logged_in: req.session.logged_in
     });
+    console.log(comment.id);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
