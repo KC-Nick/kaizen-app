@@ -4,10 +4,10 @@
     "description": "A support group for your goals.",
     "main": "server.js",
     "scripts": {
-      "test": "node test",
-      "start": "node server.js",
-      "seed": "node seeds/seeds.js",
-      "heroku-postbuild": "npm run seed"
+        "test": "node test",
+        "start": "node server.js",
+        "seed": "node seeds/seeds.js",
+        "heroku-postbuild": "npm run seed"
     },
     "repository": {
         "type": "git",
