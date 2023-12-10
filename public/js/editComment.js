@@ -16,6 +16,7 @@ const editButtonHandler = async () => {
         });
         
         if (response.ok) {
+          alert('Comment updated!')
           document.location.replace(`/comments/${id}`);
         } else {
           alert('Failed to edit comment');
