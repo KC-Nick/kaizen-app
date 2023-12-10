@@ -18,8 +18,7 @@ const editButtonHandler = async (event) => {
         });
         
         if (response.ok) {
-          console.log("editpost js")
-          document.location.reload();
+          document.location.replace(`/posts/${id}`);
         } else {
           alert('Failed to edit post');
         }

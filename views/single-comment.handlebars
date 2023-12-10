@@ -3,5 +3,7 @@
   <a href="/comments/{{id}}/edit" value="edit">edit</a>
   <p>Created by {{comment.user.name}} — {{format_date date_created}}</p>
   <div class="col-md-4">
-    <button class="btn btn-danger" data-id="{{comment.id}}" value="delete">delete</button>
+    <button class="btn btn-danger" data-id="{{this.id}}" value="delete">delete</button>
   </div>
+  
+  <script src="/js/delete-ind-comment.js"></script>

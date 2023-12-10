@@ -1,9 +1,8 @@
-let editButtonClick = document.querySelector('.btn-com-save');
+let editButtonClick = document.querySelector('.btn-com-edit');
 
 
-const editButtonHandler = async (event) => {
-    if (event.target.hasAttribute('id')) {
-      const id = event.target.getAttribute('id');
+const editButtonHandler = async () => {
+      const id = window.location.pathname.split("/")[2];
       
       const description = document.querySelector('#com-desc-input').value.trim();
       
@@ -17,14 +16,11 @@ const editButtonHandler = async (event) => {
         });
         
         if (response.ok) {
-          document.location.reload();
+          document.location.replace(`/comments/${id}`);
         } else {
           alert('Failed to edit comment');
         }
-      }
     }
   };
-
-
   
 editButtonClick.addEventListener('click', editButtonHandler);
