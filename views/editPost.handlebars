@@ -1,10 +1,11 @@
-<h2>please enter your new goal description, and new timeframe.</h2>
+<h2>please enter your new goal name, description, and timeframe.</h2>
 <form>
+  <label for="goal-name-input">new name:</label>
+  <textarea id="name-input"></textarea>
   <label for="goal-desc-input">new description:</label>
   <textarea id="desc-input"></textarea>
   <label for="timeframe-input">new timeframe:</label>
   <textarea id="timeframe-input"></textarea>
-  <script>console.log(post.id);</script>
   <button type="submit" data-id="{{post.id}}" class="btn btn-edit">save</button>
 </form>
 
