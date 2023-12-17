@@ -48,7 +48,6 @@ router.get('/posts/:id', async (req, res) => {
       ...post,
       logged_in: req.session.logged_in
     });
-    console.log(post);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -70,7 +69,6 @@ router.get('/comments/:id', async (req, res) => {
       ...comment,
       logged_in: req.session.logged_in
     });
-    console.log(comment);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -101,7 +99,6 @@ router.get('/comments/:id/edit', async (req, res) => {
       comment,
       logged_in: req.session.logged_in
     });
-    console.log(comment.id);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -118,7 +115,6 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    console.log(user);
     res.render('profile', {
       ...user,
       logged_in: true
