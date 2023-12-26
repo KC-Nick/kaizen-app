@@ -1,7 +1,7 @@
-<div id="{{{comment.id}}}" class="text-center">
-  <p>{{description}}</p>
-  <a href="/comments/{{id}}/edit" value="edit">edit</a>
-  <p>Created by {{this.user.name}} — {{format_date date_created}}</p>
+<div id="{{{comment.id}}}" class="text-center md-mt-header posts">
+  <p class="italic ml-box wrap">{{description}}</p>
+  <a class="btn-center edit-btn my-2" href="/comments/{{id}}/edit" value="edit">edit</a>
+  <p class="my-2">Created by {{this.user.name}} — {{format_date date_created}}</p>
   <div class="col-md-4">
     <button class="btn btn-danger" data-id="{{this.id}}" value="delete">delete</button>
   </div>

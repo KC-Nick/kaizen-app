@@ -25,19 +25,11 @@ h1 {
   border: 3px solid;
   padding: 10px 10px;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  position: relative;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
+  position: absolute;
 }
-  
-
-  h2 {
-    vertical-align: top;
-    text-align: left;
-    padding-bottom: 10px;
-  }
 
 input,
 label,
@@ -65,7 +57,6 @@ position: relative;
 user-select: none;
 -webkit-user-select: none;
 touch-action: manipulation;
-
 }
 
 .btn:active {
@@ -79,9 +70,8 @@ color: rgb(11, 11, 107);
 text-decoration: underline;
 }
 
-@media (min-width: 768px) {
-.btn {
-  padding: 0.25em 0.75em;
+@media screen and (max-width: 768px) {
+.title {
+  margin-bottom: 2%;
 }
-}  
-
+} 

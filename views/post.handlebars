@@ -1,26 +1,30 @@
-<div id="{{{id}}}" class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{description}}</p>
-  <p>{{timeframe}}</p>
-  <a href="/posts/{{id}}/edit" value="edit">edit</a>
-  <p>Created by {{user.name}} — {{format_date date_created}}</p>
-  <div class="col-md-4">
-    <button class="btn btn-danger" data-id="{{id}}" value="delete">delete</button>
+<div id="{{{id}}}" class="md-mt-header text-center">
+  <div class="posts">
+    <h2 class="border-frame goal-border-frame text-3xl">goal; {{name}}</h2>
+    <p class="ml-box italic wrap">notes; {{description}}</p>
+    <p class="border-frame timeframe-border">timeframe; {{timeframe}}</p>
+    <a href="/posts/{{id}}/edit" value="edit" class="edit-btn my-2">edit</a>
+    <p>Created by {{user.name}} — {{format_date date_created}}</p>
+    <div class="col-md-4">
+      <button class="btn btn-danger" data-id="{{id}}" value="delete">delete</button>
+    </div>
+    <p>Leave a comment below.</p>
   </div>
-  <p>Leave a comment below.</p>
 </div>
-<div class="main-commentdiv">
-  <div class="new-commentdiv">
-    <h3>Create a New Comment:</h3>
-    <form class="new-comment-form">
-      <div class="form-group">
-        <label for="comment-desc">description:</label>
-        <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
+<div>
+  <div class="comments">
+    <div class="new-comment">
+      <h3>Create a New Comment:</h3>
+      <form class="form new-comment-form">
+        <div class="form-group">
+          <label for="comment-desc">description:</label>
+          <input class="form-input comments input" id="comment-desc" name="comment-desc"></input>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-cmnt-crt">Create</button>
+        </div>
+      </form>
+    </div>
   </div>
   {{#if comments.length}}
   <div class="current-commentdiv comment-list">
