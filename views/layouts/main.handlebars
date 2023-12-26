@@ -10,24 +10,26 @@
 </head>
 
 <body class="justify-around">
-  <header class= "title">
-    <h1 class="text-blue-900 text-6xl"><a class= "href" href="/">THE KAIZEN APP</a></h1>
-<h2 class="text-blue-600 text-4xl"> The Social goal sharing site!</h2>
-  <!-- Conditionally render login or logout links -->
+  <header class="title">
+    <h1 class="text-blue-900 text-6xl text-center main-title"><a class="href" href="/">THE KAIZEN APP</a></h1>
+    <h2 class="text-blue-600 text-4xl text-center m-top-25 underline">The social goal sharing site!</h2>
+    <p class="text-center shadow text-blue-900 mb-4">Kaizen is a Japanese word meaning 'continual improvement daily',<br>
+      in the nature of this we encourage you to set a goal to help you improve your life a little today! </p>
+    <!-- Conditionally render login or logout links -->
     {{#if logged_in}}
-    <a class="href profile" href="/profile">profile</a>
-    <button class= "no-button" id="logout">logout</button>
+    <a class="href btn-center btn-top" href="/">home</a>
+    <a class="href profile btn-center btn-mid" href="/profile">profile</a>
+    <button class="btn-center btn-btm" id="logout">logout</button>
     {{else}}
-    <a class="href" href="/login">login</a>
+    <a class="href btn-center btn-top" href="/login">login</a>
     {{/if}}
   </header>
-  <main class="login text-2xl auto-rows-auto" "bg-indigo-500">
+  <main class="text-2xl mt-header">
     {{{ body }}}
   </main>
   <footer>
 
   </footer>
-  <!--<script src="/path/to/masonry.pkgd.min.js"></script> -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
