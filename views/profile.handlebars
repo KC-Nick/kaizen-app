@@ -1,40 +1,44 @@
-<div class="welcome-row">
-  <div class="header-two">
-    <h2>Welcome, {{name}}!</h2>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<div>
+  <div>
+    <h2 class="text-blue-600 ml-40 grad">Welcome, {{name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>create a new goal</h3>
+  <div class="text-blue-900 text-3xl text-center m-50">
+    <h3>create a new goal;</h3>
 
     <form class="form new-goal-form">
       <div class="form-group">
-        <label for="post-name">goal: </label>
-        <input class="form-input" type="text" id="goal-name" name="goal-name" />
+        <label for="goal-name">goal:</label>
+        <input class="form-input sm-mb m-top-25 input" id="goal-name" name="goal-name"></input>
       </div>
       <div class="form-group">
         <label for="goal-desc">description:</label>
-        <textarea class="form-input" id="goal-desc" name="goal-desc"></textarea>
+        <input class="form-input sm-mb m-top-25 input" id="goal-desc" name="goal-desc"></input>
       </div>
       <div class="form-group">
-        <label class="timeframe">timeframe: </label>
-        <textarea class="timeframe" id="timeframe" name="timeframe"></textarea>
+        <label for="timeframe">timeframe:</label>
+        <input class="timeframe m-top-25 input" id="timeframe" name="timeframe"></input>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">create</button>
+        <button type="submit" class="btn btn-primary m-top-25">create</button>
       </div>
     </form>
   </div>
 
   {{#if this.posts.length}}
-  <div class="col-md-6 post-list">
-    <h3>current goal:</h3>
+  <div class="posts ml-40 post-list">
+    <h3 class="mb-4">current goals:</h3>
 
     {{#each this.posts as |post|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/posts/{{post.id}}">{{post.name}}</a></h4>
+        <h4 class="border-frame post-border-frame"><a href="/posts/{{post.id}}">{{post.name}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-danger" data-id="{{post.id}}" value="delete">delete</button>

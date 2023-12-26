@@ -1,12 +1,12 @@
-<h2>please enter your new goal name, description, and timeframe.</h2>
-<form>
-  <label for="goal-name-input">new name:</label>
-  <textarea id="name-input"></textarea>
-  <label for="goal-desc-input">new description:</label>
-  <textarea id="desc-input"></textarea>
-  <label for="timeframe-input">new timeframe:</label>
-  <textarea id="timeframe-input"></textarea>
-  <button type="submit" data-id="{{post.id}}" class="btn btn-edit">save</button>
+<h2 class="text-center mt-header">please enter your new goal name, description, and timeframe.</h2>
+<form class="new-post form my-2">
+  <label class="sm-mb" for="goal-name-input">new name:</label>
+  <input id="name-input" class="input"></input>
+  <label class="sm-mb my-2" for="goal-desc-input" class="new-post-form">new description:</label>
+  <input id="desc-input" class="input"></input>
+  <label class="sm-mb my-2" for="timeframe-input" class="new-post-form">new timeframe:</label>
+  <input id="timeframe-input" class="input"></input>
+  <button type="submit" data-id="{{post.id}}" class="btn save-btn">save</button>
 </form>
 
 <script src="/js/editPost.js"></script>
