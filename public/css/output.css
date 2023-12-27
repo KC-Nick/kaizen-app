@@ -702,6 +702,13 @@ video {
   padding: 2%;
 }
 
+.goal {
+  margin-left: 10%;
+  width: fit-content;
+  max-width: 75%;
+  padding: 1%;
+}
+
 .postsdesc {
   margin-bottom: -4%;
 }
