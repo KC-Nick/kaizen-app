@@ -19,7 +19,7 @@ const loginFormHandler = async (event) => {
         // If successful, redirect the browser to the profile page
         document.location.replace('/profile');
       } else {
-        alert(response.statusText);
+        alert(' Error: ' + response.status + ' ' + response.statusText);
       }
     }
   };
@@ -40,8 +40,10 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/profile');
+      } else if (response.status === 400) {
+        alert('Error: Not enough characters! Please keep all inputs over 6 characters.');
       } else {
-        alert(response.statusText);
+        alert(' Error: ' + response.status + ' ' + response.statusText);
       }
     }
   };
