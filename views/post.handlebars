@@ -8,6 +8,7 @@
     <div class="col-md-4">
       <button class="btn btn-danger" data-id="{{id}}" value="delete">delete</button>
     </div>
+      {{#if logged_in}}
     <p>Leave a comment below.</p>
   </div>
 </div>
@@ -26,6 +27,7 @@
       </form>
     </div>
   </div>
+  {{/if}}
   {{#if comments.length}}
   <div class="current-commentdiv comment-list">
     <h3>Current Comments:</h3>
